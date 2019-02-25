@@ -1,0 +1,267 @@
+
+/* Wavemaker font/color styles
+    NOTE: This app uses Franklin Gothic Medium for sans-serif;
+    Fonts: {
+        Titles: Franklin Gothic Demi. Upper Case;
+        Subtitle: Franklin Gothic Demi. Sentence Case;
+        Text Header: Calibri Light. Sentence Case;
+        Text Body: Calibri Light. Sentence Case;
+    };
+    
+    NOTE: The names of these colors are rough estimations for simplicity;
+    The colors are in order of preference (i.e. what should take up the bulk of the content)
+    Color Schemes {
+        Primary Colors: {
+            White: #FFFFFF;
+            Dark Grey: #3E413D;
+            Orange: #ED6B31, RGB(237,107,49);
+            Red: #9E323A;
+        };
+        Secondary Colors: {
+            Yellow: #F9AE42;
+            Dark Blue: #1F4E79;
+            Aqua: #5DA1B5;
+            Purple: #4E1842;
+            Green: #548235;
+        };
+        Highlight Colors: {
+            Pink: #D54C61;
+            Dark Yellow: #D8853B;
+            Yellow-Green: #998A2F;
+            Dark Blue-Green: #275950;
+            Very Dark Blue: #102F3F;
+        };
+    }
+ */
+
+html {
+    font-family: "Calibri Light";
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #3E413D;
+    margin: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+p {
+    margin : 0;
+}
+
+/* ---------------- Top Header. Access buttons, message updates etc. Present on most other pages --------------------- */
+
+.header-toolbar {
+    position: fixed;
+    height: 4.5em;
+    width: 100%;
+    background-color: #ED6B31;
+
+    box-shadow: 0 0 3px 1px #3E413D;
+
+    z-index: 1;
+}
+
+.flex-header {
+    margin: 0 20em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-title, .toolbar-buttons {
+    padding: 0.5em 0em;
+}
+
+.toolbar-buttons {
+    align-self: center;
+    padding-top: 0.75em;
+}
+
+.page-title a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 1.5px 1.5px #3E413D;
+}
+
+.page-title a:hover {
+    color: #3E413D;
+    text-shadow: 1px 1px;
+}
+
+/* -------------------- Message Notifications --------------------------- */
+
+.notification-button img {
+    cursor: pointer;
+}
+
+#messages-button {
+    position: relative;
+    z-index: 1;
+}
+
+.message-button-color-block {
+    position: relative;
+    top: -3.0em;
+    right: -0.1em;
+
+    height : 40px;
+    width: 40px;
+    border-radius: 100%;
+    border-width: 1px;
+
+    background-color: #FFFFFF;
+}
+
+#message-button-hover {
+    background-color: #D11925;
+}
+
+#unread-message-icon {
+    position: relative;
+    bottom: 5.8em;
+    left: 2em;
+
+    background-color: #20C8FC;
+    color: #FFFFFF;
+
+    border-width: 1px;
+    border-radius: 100%;
+
+    height: 20px;
+    width: 20px;
+
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+
+    z-index: 10;
+
+    cursor: default;
+}
+
+/* ----------------------- Messages Panel ------------------------------- */
+
+.notification-messages-panel {
+    position: absolute;
+    right: 20.5em;
+    top: 3.75em;
+
+    height: 25em;
+    width: 25em;
+    overflow-y: auto;
+
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px grey, -1px 5px 5px grey;
+}
+
+.message-panel-title {
+    height: 1em;
+    padding: 0.5em 1em;
+
+    background-color: #E2E2E2;
+    text-transform: capitalize;
+}
+
+.notification-message {
+    height: 2em;
+    padding: 1em;
+
+    cursor: pointer;
+}
+
+.notification-message:hover {
+    background-color: #EFEFEF;
+}
+
+/* Titles are preferred to be upper-case. Given there is more flexibility with
+what constitutes a sub-title only h1 is changed here
+Used Franklin Gothic Medium for sans-serif purposes.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: "Franklin Gothic Medium";
+    margin: 0;
+}
+
+/* h2 is often used for the title of each Application */
+
+h2 {
+    font-size: 2em;
+    text-shadow: 1px 1px 1px #3E413D;
+}
+
+/* Panels. This mainly alters the position and the colours scheme of the
+side panels. Individual panels are held in that app's own css page. */
+
+.main-panels{
+    display: flex;
+    position: absolute;
+    top: 4.5em;
+    width: 100%;
+}
+
+main {
+    padding: 2em 3em;
+    width: 100%;
+}
+
+.left-panel {
+    min-width: 8em;
+    min-height: 100vh;
+
+    background-color: #2E302E;
+}
+
+/* Application Titles */
+
+.application-title {
+    margin-bottom: 1em;
+
+    color: #ED6B31;
+    text-shadow: 1px 1px 1px #3E413D;
+}
+
+/* Buttons */
+
+button {
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+
+    padding: 0.5em;
+
+    color: #FFFFFF;
+    background-color: #ED6B31;
+    text-shadow: 1px 1px black;
+
+    border-style: outset;
+    border-color: lightgrey;
+    border-radius: 6px;
+
+    box-shadow: 1px 1px grey;
+
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: grey;
+}
+
+button:active {
+    box-shadow: none;
+    border-style: inset;
+
+    background-color: #CE5A27;
+}
+
+/* Data Tables */
+
+.header-cell {
+    background-color: #3E413D;
+    color: #FFFFFF;
+}

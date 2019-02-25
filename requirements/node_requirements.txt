@@ -1,0 +1,8 @@
+Dependencies can be found inside './static/package.json'
+
+Can be installed on the command line via:
+
+	npm i babel-loader react react-dom --save-dev
+
+Use 'save-dev' option if module is used for building a bundle but not in production. Use 'save' if module
+is used in production

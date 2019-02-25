@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/general_styles.css') }}" />
+        <link rel="icon" href="{{ url_for('static', filename='images/Icons/wavemaker.ico') }}" />
+        <title>{% block title %}Portal{% endblock %}</title>
+        {% block head %}{% endblock %}
+    </head>
+
+    <body>
+        <div class="header-toolbar">
+            <div class="flex-header">
+                <h1 class="page-title"><a href="{{ url_for('welcome_page') }}">Portal</a></h1>
+                <div class="toolbar-buttons" id="header-toolbar-panel"></div>
+            </div>
+        </div>
+
+        <div class="main-panels">
+            <div class="left-panel"></div>
+
+            <main>
+                {% block main %}{% endblock %}
+            </main>
+        </div>
+        {% block body %}{% endblock %}
+    </body>
+    <script src='{{ url_for("static", filename="bundles/header_toolbar.js") }}' type="text/javascript"></script>
+</html>

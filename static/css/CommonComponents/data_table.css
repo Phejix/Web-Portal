@@ -1,0 +1,26 @@
+/* 
+    Used with most pages that load the 
+    React component DataTable found in CommonComponents/DataTable/DataTable.jsx
+*/
+
+/* Default dimensions are set here but can be overwritten by passing the data table an id */
+.data-table-overflow-wrapper {
+    overflow: auto;
+}
+
+.data-table-cell {
+    display: inline-grid;
+    align-items: center;
+
+    padding: 0.313em;
+    text-align: center;
+}
+
+/* Sticky header-cells won't work in Internet Explorer & Edge 15 (or previous) */
+.header-cell {
+    font-weight: bold;
+
+    position: -webkit-sticky; /*Safari*/
+    position: sticky;
+    top: 0;
+}

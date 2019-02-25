@@ -1,0 +1,47 @@
+/*
+    Displays the individual applications in a grid format.
+
+    Apps are column based flex boxes with an image above a title.
+*/
+
+.app-holder {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.app {
+    color: #2E302E;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+
+    align-content: center;
+
+    transition: color 0.333s;
+}
+
+.app:hover {
+    color: #D11925;
+}
+
+/* Without this Images are stretched to match text */
+.app img {
+    align-self: center;
+}
+
+.app-name {
+    display: inline-block;
+
+    color: inherit;
+
+    font-family: "Calibri Light";
+    font-size: 1.125em;
+
+    text-shadow: 0 0.5px black;
+    text-align: center;
+
+    padding: 0.1em 0;
+}
